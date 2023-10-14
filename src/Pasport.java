@@ -14,7 +14,7 @@ public class Pasport {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Pasport pasport = (Pasport) o;
-        return number == pasport.number && series == pasport.series;
+        return Objects.equals(this.number, pasport.number) && Objects.equals(this.series, pasport.series);
     }
 
     @Override
